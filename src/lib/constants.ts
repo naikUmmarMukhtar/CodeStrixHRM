@@ -9,29 +9,27 @@ export const FIREBASE_CONFIG = {
 
 export const API_BASE_URL = import.meta.env.VITE_FIREBASE_DATABASE_URL;
 
-// export const OFFICE_COORDS = { lat: 33.902872, lng: 74.925053 };
 export const OFFICE_COORDS = { lat: 33.999889, lng: 74.792602 };
 export const OFFICE_RADIUS_METERS = 40;
-export const CHECKIN_START = { hour: 9, minute: 15 };
-export const CHECKIN_END = { hour: 10, minute: 15 };
-export const CHECKOUT_MIN = { hour: 16, minute: 30 };
-export const CHECKOUT_MAX = { hour: 19, minute: 0 };
+export const CHECKIN_START = { hour: 8, minute: 45 };
+export const CHECKIN_END = { hour: 9, minute: 15 };
+export const CHECKOUT_MIN = { hour: 17, minute: 0 };
+export const CHECKOUT_MAX = { hour: 18, minute: 0 };
 export const EMP_CODE = "EMP010925";
 export const ADMIN_CODE = "CS050525";
 
 export const FIXED_HOLIDAYS = [
-  "2025-01-01", // New Year
-  "2025-01-26", // Republic Day
-  "2025-02-26", // Maha Shivaratri
-  "2025-03-31", // Ramzan (Id-ul-Fitr)
-  "2025-04-18", // Good Friday
-  "2025-05-01", // May Day
-  "2025-06-06", // Id-ul Ad’ha (Bakrid)
-  "2025-07-06", // Muharram
-  "2025-08-15", // Independence Day
-  "2025-10-02", // Gandhi Jayanti
-  "2025-10-20", // Diwali (Bali Pratipada)
-  "2025-12-25", // Christmas
+  "2026-01-26",
+  "2026-03-17",
+  "2026-03-21",
+  "2026-03-22",
+  "2026-05-27", // Eid-ul-Adha / Bakrid (Day 1)
+  "2026-05-28", // Eid-ul-Adha / Bakrid (Day 2)
+  "2026-05-29", // Eid-ul-Adha / Bakrid (Day 3)
+  "2026-06-26", // Ashura (Muharram)
+  "2026-08-15", // Independence Day
+  "2026-10-02", // Gandhi Jayanti
+  "2026-12-25", // Christmas
 ];
 
 export const WEEKEND_DAYS = [0, 6];

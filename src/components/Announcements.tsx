@@ -4,18 +4,28 @@ import { Megaphone } from "lucide-react";
 export default function Announcements() {
   const announcements = [
     {
-      date: "Oct 31",
-      text: "All hands meeting moved to 2:00 PM.",
-      color: "var(--color-accent)",
-    },
-    {
-      date: "Nov 1",
-      text: "Submit Q3 goals review by EOD.",
+      date: "Check-In",
+      text: "Official check-in window is 8:45 AM – 9:15 AM. Arrivals after 9:15 AM will be marked late and may result in salary deduction.",
       color: "var(--color-primary)",
     },
     {
-      date: "Nov 28",
-      text: "Office closed for Thanksgiving.",
+      date: "Check-Out",
+      text: "Early departures before 5:00 PM are not permitted. The checkout window closes at 6:00 PM.",
+      color: "var(--color-secondary)",
+    },
+    {
+      date: "Punctuality",
+      text: "Repeated late arrivals will lead to disciplinary action. Be on time — consistent tardiness directly affects your salary.",
+      color: "var(--color-accent)",
+    },
+    {
+      date: "ID Cards",
+      text: "All employees must wear their office ID cards at all times within the premises. Entry may be denied without a valid card.",
+      color: "var(--color-primary)",
+    },
+    {
+      date: "Discipline",
+      text: "Maintain professional conduct, dress code, and workplace etiquette at all times. Violations will be taken seriously.",
       color: "var(--color-secondary)",
     },
   ];
