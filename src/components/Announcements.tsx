@@ -1,32 +1,36 @@
-// @ts-nocheck
 import { Megaphone } from "lucide-react";
 
 export default function Announcements() {
   const announcements = [
     {
       date: "Check-In",
-      text: "Official check-in window is 8:45 AM – 9:15 AM. Arrivals after 9:15 AM will be marked late and may result in salary deduction.",
+      text: "Come in between 8:45 AM and 9:15 AM. Coming after 9:15 AM is late — a message will be sent to Teams and your salary may be cut.",
       color: "var(--color-primary)",
     },
     {
       date: "Check-Out",
-      text: "Early departures before 5:00 PM are not permitted. The checkout window closes at 6:00 PM.",
+      text: "Do not leave before 5:00 PM. You must check out by 6:00 PM.",
       color: "var(--color-secondary)",
     },
     {
       date: "Punctuality",
-      text: "Repeated late arrivals will lead to disciplinary action. Be on time — consistent tardiness directly affects your salary.",
+      text: "Coming late again and again will cause problems. It will also affect your salary.",
       color: "var(--color-accent)",
     },
     {
       date: "ID Cards",
-      text: "All employees must wear their office ID cards at all times within the premises. Entry may be denied without a valid card.",
+      text: "Always wear your ID card in the office. You may not be allowed in without it.",
       color: "var(--color-primary)",
     },
     {
       date: "Discipline",
-      text: "Maintain professional conduct, dress code, and workplace etiquette at all times. Violations will be taken seriously.",
+      text: "Behave properly, dress well, and be respectful at work. Bad conduct will not be ignored.",
       color: "var(--color-secondary)",
+    },
+    {
+      date: "Attendance Report",
+      text: "Your attendance will be sent to HR on 1st of every month. It starts from 1st April. Keep your attendance correct.",
+      color: "var(--color-accent)",
     },
   ];
 

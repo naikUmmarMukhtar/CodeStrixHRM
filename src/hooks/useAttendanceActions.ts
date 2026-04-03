@@ -34,7 +34,7 @@ const convertTo24Hr = (timeStr) => {
   if (modifier === "AM" && hours === 12) hours = 0;
   return `${String(hours).padStart(2, "0")}:${String(minutes).padStart(
     2,
-    "0"
+    "0",
   )}:${String(seconds).padStart(2, "0")}`;
 };
 
@@ -75,7 +75,7 @@ export function useAttendanceActions(setIsCheckedIn) {
         (now.getHours() === CHECKIN_START.hour &&
           now.getMinutes() < CHECKIN_START.minute)
       ) {
-        showErrorToast("Check-in not allowed before 9:15 AM.");
+        showErrorToast("Check-in not allowed before 8:45 AM.");
         return;
       }
       if (
@@ -84,7 +84,7 @@ export function useAttendanceActions(setIsCheckedIn) {
           now.getMinutes() > CHECKIN_END.minute)
       ) {
         const confirmLate = await confirmAction(
-          `It's after 10:15 AM. This will be recorded as a late check-in. Do you still want to proceed?`
+          `It's after 9:15 AM. This will be recorded as a late check-in. Do you still want to proceed?`,
         );
         if (!confirmLate) return;
       }
@@ -112,7 +112,7 @@ export function useAttendanceActions(setIsCheckedIn) {
     try {
       if (now.getHours() < CHECKOUT_MIN.hour) {
         const confirmEarly = await confirmAction(
-          `It's before 4:30 PM. Checking out early may affect your total work duration. Do you still want to proceed?`
+          `It's before 5:00 PM. Checking out early may affect your total work duration. Do you still want to proceed?`,
         );
         if (!confirmEarly) return;
       }
@@ -121,12 +121,12 @@ export function useAttendanceActions(setIsCheckedIn) {
         (now.getHours() === CHECKOUT_MAX.hour &&
           now.getMinutes() > CHECKOUT_MAX.minute)
       ) {
-        showErrorToast(`Checkout is not allowed after 7:00 PM.`);
+        showErrorToast(`Checkout is not allowed after 6:00 PM.`);
         return;
       }
 
       const existingData = await getFromFirebase(
-        `/teammembers/${userId}/attendance/${today}`
+        `/teammembers/${userId}/attendance/${today}`,
       );
       if (!existingData) {
         showErrorToast("No check-in found for today.");
@@ -160,7 +160,7 @@ export function useAttendanceActions(setIsCheckedIn) {
     } catch (error) {
       console.error("Error during check-out:", error);
       showErrorToast(
-        "Something went wrong during check-out. Please try again."
+        "Something went wrong during check-out. Please try again.",
       );
     } finally {
     }
