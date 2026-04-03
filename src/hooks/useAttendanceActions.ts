@@ -112,7 +112,7 @@ export function useAttendanceActions(setIsCheckedIn) {
     try {
       if (now.getHours() < CHECKOUT_MIN.hour) {
         const confirmEarly = await confirmAction(
-          `It's before 5:00 PM. Checking out early may affect your total work duration. Do you still want to proceed?`,
+          `It's before 4:30 PM. Checking out early may affect your total work duration. Do you still want to proceed?`,
         );
         if (!confirmEarly) return;
       }
@@ -121,7 +121,7 @@ export function useAttendanceActions(setIsCheckedIn) {
         (now.getHours() === CHECKOUT_MAX.hour &&
           now.getMinutes() > CHECKOUT_MAX.minute)
       ) {
-        showErrorToast(`Checkout is not allowed after 6:00 PM.`);
+        showErrorToast(`Checkout is not allowed after 7:00 PM.`);
         return;
       }
 

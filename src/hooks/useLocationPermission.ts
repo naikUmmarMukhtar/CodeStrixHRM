@@ -6,7 +6,7 @@ const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 
 const getCurrentPositionAsync = (options?: PositionOptions) =>
   new Promise<GeolocationPosition>((resolve, reject) =>
-    navigator.geolocation.getCurrentPosition(resolve, reject, options)
+    navigator.geolocation.getCurrentPosition(resolve, reject, options),
   );
 
 export const useLocationPermission = () => {
@@ -63,7 +63,7 @@ export const useLocationPermission = () => {
         return false;
       }
     },
-    []
+    [],
   );
 
   const checkPermission = useCallback(async () => {

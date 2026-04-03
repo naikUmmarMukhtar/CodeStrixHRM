@@ -40,7 +40,7 @@ export default function Home() {
       if (!uid) return;
       try {
         const details = await getFromFirebase(
-          `/teammembers/${uid}/userDetails`
+          `/teammembers/${uid}/userDetails`,
         );
         const employeeRecord = details ? Object.values(details)[0] : null;
         if (employeeRecord?.username) setEmployeeName(employeeRecord.username);
@@ -58,7 +58,7 @@ export default function Home() {
 
       try {
         const record = await getFromFirebase(
-          `/teammembers/${uid}/attendance/${todayKey}`
+          `/teammembers/${uid}/attendance/${todayKey}`,
         );
         if (!record) return;
 
@@ -91,7 +91,7 @@ export default function Home() {
     if (!locationAllowed) {
       if (permissionState === "denied") {
         showErrorToast(
-          "Location permission denied. Enable site location in your browser settings."
+          "Location permission denied. Enable site location in your browser settings.",
         );
       } else {
         showErrorToast("Please turn on device location services.");
